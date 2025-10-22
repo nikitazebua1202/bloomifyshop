@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffe6eb 0%, #ffd6e0 100%);
+    color: #4a1a2c;
+    min-height: 100vh;
+
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    animation: pageSlideIn 0.5s ease-out;
+}
+
+@keyframes pageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(233, 30, 99, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-left .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-right a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+.navbar-right a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.navbar-right a:hover::after,
+.navbar-right a.active::after {
+    width: 100%;
+}
+
+.navbar-right a:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    color: #fff;
+    background-image: url('Toko Bunga.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(179, 0, 94, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease;
+}
+
+.hero p {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card Container */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    padding: 60px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Card Styles */
+.card {
+    background: linear-gradient(135deg, #ffccd5 0%, #ffb3c6 100%);
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    padding: 25px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(179, 0, 94, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.4em;
+    color: #b3005e;
+    font-weight: 700;
+}
+
+.desc {
+    font-size: 0.95em;
+    color: #6a2c3e;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.price {
+    margin: 15px 0 20px;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #a0004a;
+}
+
+/* Enhanced Purchase Button */
+.purchase-btn {
+    background: linear-gradient(135deg, #b3005e 0%, #d6006f 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 35px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(179, 0, 94, 0.3);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+.purchase-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.purchase-btn:hover {
+    background: linear-gradient(135deg, #d6006f 0%, #ff1a8c 100%);
+    box-shadow: 0 6px 25px rgba(255, 77, 148, 0.5);
+    transform: translateY(-2px);
+}
+
+.purchase-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.purchase-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(179, 0, 94, 0.4);
+}
+
+.purchase-btn.clicked {
+    animation: clickPulse 0.3s ease;
+    background: linear-gradient(135deg, #8a0048 0%, #b3005e 100%);
+}
+
+@keyframes clickPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(135deg, #b3005e 0%, #8a0048 100%);
+    color: white;
+    font-size: 0.95em;
+    margin-top: 40px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 25px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar-right a {
+        margin-left: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 40px 25px;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-left {
+        font-size: 24px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+}

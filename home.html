@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomify - Find The Best Bouquet Flowers</title>
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <span class="logo">🌸 Bloomify</span>
+        </div>
+        <div class="navbar-right">
+            <a href="home.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Bloomify</h1>
+            <p>Find The Best Bouquet Flowers Here! 💐</p>
+        </div>
+    </header>
+
+    <section class="card-container" id="bouquets">
+        <div class="card">
+            <img src="bouquet1.jpg" alt="Pink-White Rose Bouquet">
+            <h3>Pink White Rose Bouquet</h3>
+            <p class="desc">Klasik & romantis, cocok untuk orang spesial.</p>
+            <p class="price">Rp 350.000</p>
+            <a href="purchase.html"><button class="purchase-btn">Purchase Now</button></a>
+        </div>
+
+        <div class="card">
+            <img src="bouquet2.jpg" alt="Sun Flower Bouquet">
+            <h3>Sun Flower Bouquet</h3>
+            <p class="desc">Elegan dan lembut, melambangkan cinta sejati.</p>
+            <p class="price">Rp 420.000</p>
+            <a href="purchase.html"><button class="purchase-btn">Purchase Now</button></a>
+        </div>
+
+        <div class="card">
+            <img src="bouquet3.jpg" alt="Sunflower Bouquet">
+            <h3>Sunflower Joy</h3>
+            <p class="desc">Hangat dan cerah, sempurna untuk mencerahkan hari.</p>
+            <p class="price">Rp 280.000</p>
+            <a href="purchase.html"><button class="purchase-btn">Purchase Now</button></a>
+        </div>
+
+        <div class="card">
+            <img src="bouquet4.jpg" alt="Mixed Bouquet">
+            <h3>Bloom Harmony</h3>
+            <p class="desc">Perpaduan warna-warni bunga pilihan yang indah.</p>
+            <p class="price">Rp 450.000</p>
+            <a href="purchase.html"><button class="purchase-btn">Purchase Now</button></a>
+        </div>
+
+        <div class="card">
+            <img src="bouquet5.jpg" alt="Dreams Bouquet">
+            <h3>Dreams Bouquet</h3>
+            <p class="desc">Wangi dan menenangkan, cocok untuk hadiah istimewa.</p>
+            <p class="price">Rp 370.000</p>
+            <a href="purchase.html"><button class="purchase-btn">Purchase Now</button></a>
+        </div>
+
+        <div class="card">
+            <img src="bouquet6.jpg" alt="Pink Tulip Bouquet">
+            <h3>Pink Tulip Bouquet</h3>
+            <p class="desc">Romantis dan mewah, melambangkan kemakmuran.</p>
+            <p class="price">Rp 480.000</p>
+            <a href="purchase.html"><button class="purchase-btn">Purchase Now</button></a>
+        </div>
+
+        <div class="card">
+            <img src="bouquet7.jpg" alt="Orchid Bouquet">
+            <h3>Exotic Orchid</h3>
+            <p class="desc">Eksotis dan mewah, simbol keanggunan abadi.</p>
+            <p class="price">Rp 520.000</p>
+            <a href="purchase.html"><button class="purchase-btn">Purchase Now</button></a>
+        </div>
+
+        <div class="card">
+            <img src="bouquet8.jpg" alt="White Rose Bouquet">
+            <h3>White Rose Bouquet</h3>
+            <p class="desc">Klasik & romantis, cocok untuk orang spesial.</p>
+            <p class="price">Rp 350.000</p>
+            <a href="purchase.html"><button class="purchase-btn">Purchase Now</button></a>
+        </div>
+
+        <div class="card">
+            <img src="bouquet9.jpg" alt="Sparkle Bouquet">
+            <h3>Sparkle Bouquet</h3>
+            <p class="desc">Klasik & romantis, cocok untuk orang spesial.</p>
+            <p class="price">Rp 350.000</p>
+            <a href="purchase.html"><button class="purchase-btn">Purchase Now</button></a>
+        </div>
+
+        <div class="card">
+            <img src="bouquet10.jpg" alt="Bloom White Tulip Bouquet">
+            <h3>Bloom White Tulip Bouquet</h3>
+            <p class="desc">Klasik & romantis, cocok untuk orang spesial.</p>
+            <p class="price">Rp 350.000</p>
+            <a href="purchase.html"><button class="purchase-btn">Purchase Now</button></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Bloomify | Crafted with 💕 for flower lovers</p>
+    </footer>
+
+    <script>
+        // Add click effect to purchase buttons
+        document.querySelectorAll('.purchase-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.add('clicked');
+                setTimeout(() => {
+                    this.classList.remove('clicked');
+                }, 300);
+            });
+        });
+    </script>
+</body>
+
+</html>
