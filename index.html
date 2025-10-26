@@ -4,42 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloomify - Your Beautiful Flowers Here!</title>
+    
     <link rel="stylesheet" href="indexstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
 
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .sparkle-icon {
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="hero-section">
         <div class="hero-content">
             <a href="home.html" class="logo-link">
-                <h1 class="logo">Bloomify</h1>
+                <h1 class="logo" style="letter-spacing: 2px; padding: 10px;">Bloomify</h1>
             </a>
-            <p class="tagline">Your Beautiful Flowers Here! 🌸</p>
+            <p class="tagline" style="font-family: Georgia, serif; letter-spacing: 1px;">Your Beautiful Flowers Here! 🌸</p>
         </div>
     </div>
 
     <footer class="footer">
         <div class="footer-content">
             <div class="social-icons">
-                <a href="#" class="social-icon" aria-label="Facebook">
+                <a href="#" class="social-icon" aria-label="Facebook" style="box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#" class="social-icon" aria-label="Instagram">
+                <a href="#" class="social-icon" aria-label="Instagram" style="box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="#" class="social-icon" aria-label="Pinterest">
+                <a href="#" class="social-icon" aria-label="Pinterest" style="box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
                     <i class="fab fa-pinterest-p"></i>
                 </a>
-                <a href="#" class="social-icon" aria-label="TikTok">
+                <a href="#" class="social-icon" aria-label="TikTok" style="box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
                     <i class="fab fa-tiktok"></i>
                 </a>
-                <a href="#" class="social-icon" aria-label="Twitter">
+                <a href="#" class="social-icon" aria-label="Twitter" style="box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
                     <i class="fab fa-twitter"></i>
                 </a>
             </div>
 
-            <div class="copyright">
+            <div class="copyright" style="text-transform: uppercase; font-size: 0.9rem;">
                 © 2025 Bloomify 💕
             </div>
         </div>
